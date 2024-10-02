@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Updock&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color: #fdbb2d;
+    --bg: #B21F1F;
+}
+
+body{
+    background: #791515;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color);
+    font-family: "Space Grotesk", sans-serif;
+}
+
+#container{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    align-items: center;
+    /* height: 100vh; */
+    /* position: relative; */
+    justify-content: center;
+    h1{
+        font-size: calc(2rem + 2vw);
+        padding-bottom: 40px;
+        width: 12ch;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    
+        span{
+            margin: 0;
+            padding: 0;
+            font-size: 2rem;
+        }
+    }
+    #QuotesContainer{
+        font-size: calc(0.7rem + 1.5vw);
+        min-height: 250px;
+        position: relative;
+        padding: 0;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        flex-direction: column;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4), -2px -2px 5px rgba(0, 0, 0, 0.4);
+        text-align: left;
+        color: var(--bg);
+        background-color: #fff;
+        width: 400px;
+        padding: 20px;
+    }
+
+    .trangle{
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-style: solid;
+        border-width: 0 30px 60px 0;
+        border-color: transparent var(--bg) transparent transparent;
+    }
+
+    p{
+        z-index: 1;
+        font-family: "Handlee", cursive;
+        font-weight: 700;
+        width: 85%;
+    }
+    #author{
+        margin-top: 10px;
+        font-weight: 400;
+        align-self: flex-end;
+        font-size: 1.2rem;
+        font-style: italic;
+        text-align: right;
+        font-family: "Nunito", sans-serif;
+    }
+}
+
+svg{
+    position: absolute;
+    width: 40px;
+    top: 10px;
+    left: 20px;
+    z-index: 0;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    gap: 20px;
+
+
+     button{
+        padding: 8px;
+        background: transparent;
+        color: var(--color);
+        background-color: var(--bg);
+        border: 2px solid var(--color);
+        display: flex;
+        font-weight: 700;
+        align-items: center;
+        justify-content: space-between;
+        width: 180px;
+        transition: all 1s ease-in-out;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4), -2px -2px 5px rgba(0, 0, 0, 0.4);
+     }
+}
+
+button:hover{
+    border-color: var(--bg);
+    color: var(--bg);
+    background-color: var(--color);
+    flex-direction: row-reverse;
+}
